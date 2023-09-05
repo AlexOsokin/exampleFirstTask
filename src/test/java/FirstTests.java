@@ -24,14 +24,14 @@ public class FirstTests {
     }
 
     @Test(description = "Первый тест")
-    void FirstTest() {
+    void firstTest() {
         System.out.println("Привет, первый тест!");
         int sum = a + 7;
         Assert.assertEquals(12, sum, "Что-то пошло не так! Сумма считается не верно!");
     }
 
     @Test(description = "Второй тест тест")
-    void SecondTest() {
+    void secondTest() {
         System.out.println("Привет, второй тест!");
     }
 }
