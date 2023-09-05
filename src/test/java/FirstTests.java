@@ -1,12 +1,15 @@
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class FirstTests {
+    private int a;
 
     @BeforeClass(alwaysRun = true)
     void beforeClass() {
+        a = 5;
         System.out.println("Перед всеми тестами!");
     }
 
@@ -23,6 +26,8 @@ public class FirstTests {
     @Test(description = "Первый тест")
     void FirstTest() {
         System.out.println("Привет, первый тест!");
+        int sum = 7 + a;
+        Assert.assertEquals(12, sum, "Что-то пошло не так! Сумма считается не верно!");
     }
 
     @Test(description = "Второй тест тест")
