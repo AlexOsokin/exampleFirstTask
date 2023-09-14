@@ -14,9 +14,11 @@ public class RickAndMortySteps {
     public List<String> getCharacterEpisodes(int characterId) {
         Response response = given()
                 .spec(rickSpecification)
+                .log().all()
                 .when()
                 .get("/character/" + characterId)
                 .then()
+                .log().all()
                 .extract()
                 .response();
         List<String> episodes = response.getBody().jsonPath().get("episode");
