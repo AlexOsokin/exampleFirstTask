@@ -19,7 +19,6 @@ public class RickAndMortySteps {
                 .then()
                 .extract()
                 .response();
-        List<String> episodes = response.getBody().jsonPath().get("episode");
-        return episodes;
+        return response.getBody().jsonPath().get("episode");
     }
 }
