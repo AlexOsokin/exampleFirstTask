@@ -1,4 +1,4 @@
-package tests;
+package api.tests;
 
 import io.qameta.allure.*;
 import io.qameta.allure.restassured.AllureRestAssured;
@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import steps.ReqresSteps;
+import api.steps.ReqresSteps;
 
 @Epic("Api тесты")
 @Feature("Reqres тесты")

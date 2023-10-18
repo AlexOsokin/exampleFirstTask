@@ -1,9 +1,9 @@
-package tests;
+package api.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import steps.RickAndMortySteps;
+import api.steps.RickAndMortySteps;
 
 import java.util.List;
 
