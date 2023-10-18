@@ -5,7 +5,6 @@ import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import api.steps.ReqresSteps;
@@ -16,7 +15,7 @@ import api.steps.ReqresSteps;
 public class ReqresTests {
     private ReqresSteps reqresSteps;
 
-    @BeforeSuite(description = "Добавляем фильтр Allure для RestAssured", alwaysRun = true)
+    @BeforeClass(description = "Добавляем фильтр Allure для RestAssured", alwaysRun = true)
     void addFilters() {
         RestAssured.filters(new AllureRestAssured());
     }

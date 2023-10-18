@@ -1,6 +1,7 @@
 package ui.tests;
 
 import com.codeborne.selenide.Configuration;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -32,6 +33,8 @@ public class SbermarketTests {
 
     @Test(description = "Поиск")
     public void searchTest() {
-        sbermarketSteps.search("Яблоко");
+        String productNameExp = "Яблоки сезонные";
+        String productNameActual = sbermarketSteps.search(productNameExp);
+        Assert.assertEquals(productNameActual, productNameExp, "Названия не совпадают");
     }
 }

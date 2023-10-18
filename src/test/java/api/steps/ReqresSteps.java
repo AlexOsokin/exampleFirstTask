@@ -28,7 +28,7 @@ public class ReqresSteps {
         return body;
     }
 
-    @Step("Выполняем запрос на создание клиента'")
+    @Step("Выполняем запрос на создание клиента")
     public String postClient(String client) {
         Response response = given()
                 .spec(reqresSpecification)
